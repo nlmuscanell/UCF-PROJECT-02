@@ -169,6 +169,10 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
             .hAlign('center')
             .padding(0)
             .margin([0, 0, 20, 0]);
+          
+          var tooltip = gauge.tooltip();
+          tooltip.enabled(false);
+
           gauge.container('radialChartA');
           gauge.draw();
         
@@ -316,6 +320,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
             .margin([0, 0, 20, 0]);
           
           var tooltip = gauge.tooltip();
+          tooltip.enabled(false);
           gauge.container('radialChartB');
           gauge.draw();
         
@@ -433,18 +438,26 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
       );
    });
 
+    // tooltip settings
+    var tooltip = chart.tooltip();
+    tooltip.format(function(e){
+      var value = (this.value)**2
+      value = Math.sqrt(value)
+      return "Value: " + value + " g"  
+      });
+
   // Temp variable to store series instance
   var series;
 
   // Create first series with mapped data
   series = chart.bar(firstSeriesData);
   series.name(capitalizeFirstLetter(defaultInputA)).color('HotPink');
-  series.tooltip().position('right').anchor('left-center');
+  series.tooltip().position('left').anchor('right-center');
 
   // Create second series with mapped data
   series = chart.bar(secondSeriesData);
   series.name(capitalizeFirstLetter(defaultInputB));
-  series.tooltip().position('left').anchor('right-center');
+  series.tooltip().position('right').anchor('left-center');
 
   // Turn on legend
   chart
