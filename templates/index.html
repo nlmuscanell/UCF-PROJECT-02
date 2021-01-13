@@ -18,43 +18,18 @@
     <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
 
     <title>Project 2</title>
-<style>
-.container{
-  margin-top:40px;
-  min-height:100vh;
-  min-width:80vw;
-  text-align:center;
-}
-section.row{
-  margin-top:20px;
-}
-.instructions{
-  min-height:100px;
-  border:1px solid black;
-}
 
-.chart-section{
-  min-height:400px;
-  border:1px solid black;
-  margin-top:20px;
-}
-
-div.col-6{
-  border:1px solid black;
-  min-height:100%;
-}
-</style>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-md-12 jumbotron text-center">
-          <h1>Project 2 Dashboard</h1>
-          <p>text</p>
+          <br>
+          <h1><strong>Fastfood Nutrition Dashboard</strong></h1>
+          <br>
         </div>
       </div>
     <div class='container'>
-      <section class="row instructions"><h4>Instructions for dropdown menu</h4></section>
       <section class="row chart-section">
 <div class="col-3">
   <strong><h4>First Menu Item</h4></strong>
@@ -73,7 +48,7 @@ div.col-6{
     <br><br>
   </form>
 </div>
-<div class="col-6" id="container"></div>
+<div class="col-6" id="container"><strong><h4>Macronutrients for Selected Items</h4></strong></div>
 <div class="col-3">
   <strong><h4>Second Menu Item</h4></strong>
   <form name="form1" id="form1" action="/action_page.php">
@@ -93,11 +68,12 @@ div.col-6{
 </div>
 </section>
        <section class="row chart-section">
-         <div class="col-6 pr-3" id="radialChartA"><h4></h4></div>
-         <div class="col-6 pr-3" id="radialChartB"><h4></h4></div>
+         <div class="col-6 pr-3" id="radialChartA">
+           <h4>Micronutrients for First Item</h4></div>
+         <div class="col-6 pr-3" id="radialChartB">
+           <h4>Micronutrients for Second Item</h4></div>
        </section>
-      <section class="row instructions"><h4>New Header aggregated data</h4></section>
-      <section class="row chart-section" id="bubble"><h4>Bubble Chart</h4></section>
+      <section class="row chart-section" id="bubble"><h4>All Menu Items by Restaurant</h4></section>
       
     </div>
 

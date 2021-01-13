@@ -32,23 +32,23 @@
 
 .itemCircle {
   /* fill: #1236d6; */
-  fill: red;
-  stroke: #e3e3e3;
+  fill: #14A1EC;
+  stroke: #131111a1;
 }
 .mcdonaldsColor {
   /* fill: #1236d6; */
-  fill: red;
-  stroke: #e3e3e3;
+  fill: #14A1EC;
+  stroke: #131111a1;
 }
 .starbucksColor {
   /* fill: #1236d6; */
-  fill: green;
-  stroke: #e3e3e3;
+  fill: deeppink;
+  stroke: #131111a1;
 }
 .subwayColor {
   /* fill: #1236d6; */
-  fill: silver;
-  stroke: #e3e3e3;
+  fill: #AE84FC;
+  stroke: #131111a1;
 }
 
 .chart {

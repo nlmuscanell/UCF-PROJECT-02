@@ -1,4 +1,4 @@
-restaurant id,category id,item id,serving size (oz),calories,calories from fat,total fat (g),total fat (% daily value),saturated fat (g),saturated fat (% daily value),trans fat (g),cholesterol (mg),cholesterol (% daily value),sodium (mg),sodium (% daily value),carbohydrates (g),carbohydrates (% daily value),dietary fiber (g),dietary fiber (% daily value),sugars (g),protein (g),vitamin a (% daily value),vitamin c (% daily value),calcium (% daily value),iron (% daily value)
+restaurant_id,category_id,item_id,serving_size_oz,calories_g,calories_from_fat,total_fat_g,total_fat_per_dv,saturated_fat_g,saturated_fat_per_dv,trans_fat_g,cholesterol_mg,cholesterol_per_dv,sodium_mg,sodium_per_dv,carbohydrates_g,carbohydrates_per_dv,dietary_fiber_g,dietary_fiber_per_dv,sugars_g,protein_g,vitamin_a_per_dv,vitamin_c_per_dv,calcium_per_dv,iron_per_dv
 1000,100,0,4.8,300,120.0,13.0,20.0,5.0,25.0,0.0,260.0,87.0,750.0,31.0,31,10.0,4,17.0,3.0,17.0,10.0,0.0,25.0,15.0
 1000,100,1,4.8,250,70.0,8.0,12.0,3.0,15.0,0.0,25.0,8.0,770.0,32.0,30,10.0,4,17.0,3.0,18.0,6.0,0.0,25.0,8.0
 1000,100,2,3.9,370,200.0,23.0,35.0,8.0,42.0,0.0,45.0,15.0,780.0,33.0,29,10.0,4,17.0,2.0,14.0,8.0,0.0,25.0,10.0

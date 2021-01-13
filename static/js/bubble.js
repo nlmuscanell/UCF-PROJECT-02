@@ -1,5 +1,5 @@
 // Create an SVG wrapper, append an SVG group that will hold our chart, and shift the latter by left and top margins.
-var svgWidth = 960;
+var svgWidth = 1300;
 var svgHeight = 800;
     
     var margin = {
@@ -11,12 +11,12 @@ var svgHeight = 800;
     
 var width = svgWidth - margin.left - margin.right;
 var height = svgHeight - margin.top - margin.bottom;
+
     
 
     var svg = d3.select("#bubble")
       .append("svg")
-      .attr("width", svgWidth)
-      .attr("height", svgHeight);
+      .attr("viewBox", `0 0 ${svgWidth} ${svgHeight}`);
     
     var chartGroup = svg.append("g")
       .attr("transform", `translate(${margin.left}, ${margin.top})`);

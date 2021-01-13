@@ -47,15 +47,10 @@ function buildGaugeA() {
     .distinctColors()
     .items([
       '#64b5f6',
-      '#1976d2',
-      '#ef6c00',
-      '#ffd54f',
-      '#455a64',
-      '#96a6a6',
-      '#dd2c00',
-      '#00838f',
-      '#00bfa5',
-      '#ffa000'
+      '#F5EA05',
+      'deeppink',
+      '#AE84FC',
+      '#4CE744',
   ]);
 
   function dinamicText(i) {
@@ -198,15 +193,10 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
     .distinctColors()
     .items([
       '#64b5f6',
-      '#1976d2',
-      '#ef6c00',
-      '#ffd54f',
-      '#455a64',
-      '#96a6a6',
-      '#dd2c00',
-      '#00838f',
-      '#00bfa5',
-      '#ffa000'
+      '#F5EA05',
+      'deeppink',
+      '#AE84FC',
+      '#4CE744',
     ]);
 
     function dinamicText(i) {
@@ -435,12 +425,12 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
 
   // Create first series with mapped data
   series = chart.bar(firstSeriesData);
-  series.name(capitalizeFirstLetter(value1)).color('HotPink');
+  series.name(capitalizeFirstLetter(value1)).color('deeppink');
   series.tooltip().position('left').anchor('right-center');
 
   // Create second series with mapped data
   series = chart.bar(secondSeriesData);
-  series.name(capitalizeFirstLetter(value2));
+  series.name(capitalizeFirstLetter(value2)).color('#14A1EC');
   series.tooltip().position('right').anchor('left-center');
 
   // Turn on legend
