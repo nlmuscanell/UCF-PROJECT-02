@@ -13,8 +13,16 @@ from flask import Flask, jsonify
 from flask import Flask, render_template, redirect
 
 #################################################
+# Flask Setup
+#################################################
+
+app = Flask(__name__)
+
+#################################################
 # Database Setup
 #################################################
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pre-registration'
+db = SQLAlchemy(app)
 
 engine = create_engine(f'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info')
 connection = engine.connect()
@@ -22,7 +30,7 @@ connection = engine.connect()
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables
-Base.prepare(engine, reflect=True)
+Base.prepare(db.engine, reflect=True)
 print(Base.classes.keys())
 
 # Save reference to the tables
@@ -31,11 +39,6 @@ Menu_items = Base.classes.menu_items
 Nutrition = Base.classes.nutrition
 Restaurants = Base.classes.restaurants
 
-#################################################
-# Flask Setup
-#################################################
-
-app = Flask(__name__)
 
 #################################################
 # Flask Routes
