@@ -54,7 +54,8 @@ CREATE TABLE nutrition (
 	vitamin_a_per_dv NUMERIC,
 	vitamin_c_per_dv NUMERIC,
 	calcium_per_dv NUMERIC,
-	iron_per_dv NUMERIC
+	iron_per_dv NUMERIC,
+	PRIMARY KEY(item_id)
 );
 
 --PRIMARY KEY(restaurant_id, category_id, item_id)--

@@ -1,56 +1,89 @@
-/* Styling */
 
 body {
-  background-color: #525252;
+  background-color: #222831;
 }
 
 #bubble {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.bar-header{
+  background-color: #64b5f6;
+  border:1px solid #64b5f6;
+  min-height:50px;
+  margin-top: 10px;
+  padding-top:10px;
+  border-radius: 25px;
+  padding-left:100px;
+  padding-right:100px;
+  margin-left: 10px;
 }
 
 .container{
-  background-color:#F7F7F9;
-  margin-top:60px;
-  margin-bottom:60px;
-  min-height:100vh;
-  min-width:80vw;
+  background-color: #222831;
+  min-height:100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align:center;
 }
 
 section.row{
-  margin-top:20px;
+  margin-top:40px;
 }
 
 .instructions{
-  background-color: beige;
-  min-height:100px;
-  /* border:1px solid black; */
+  background-color: #64b5f6;
+  min-height:60px;
+  border:1px solid #64b5f6;
+  border-radius: 25px;
+  padding-top:14px
 }
 
 .chart-section{
-  background-color: #F7F7F9;
+  background-color:#F7F7F9;
   min-height:400px;
-  margin-top:20px;
-  margin-bottom:20px;
+  min-width:60vw;
+  margin-right: 1px;
+  margin-left: 0.5px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border-radius: 25px
 }
-
 div.col-6{
+  border:1px #F7F7F9;
   min-height:100%;
+  border-color: #F7F7F9
+  
 }
 
-div.col-3{
-  min-height:100%;
-  background-color: #F7F7F9;
+#header{
+  color: #222831; 
+  background-color:#F7F7F9;
+  border-radius: 25px;
+  margin-top:20px;
+  min-height:90px;
+  padding-top:20px;
+  min-width:60vw;
 }
 
-div.col-md-12{
-  min-height:100%;
-  background-color: #64b5f6;
+h1{
+  font-family: 'Arial', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
 }
 
-h4 {
-  border: 2px solid black;
-  background-color: #64b5f6;
+h4{
+  font-family: 'Verdana', sans-serif;
+  font-weight: 700;
+}
+
+#form1{
+  font-family: 'Verdana', sans-serif;
+  font-size: 14px;
+}
+
+.col-3 {
+  margin-top:30px;
 }
 
 /* Mobile Rules */

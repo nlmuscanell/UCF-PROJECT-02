@@ -82,7 +82,7 @@ function buildGaugeA() {
         .radius(radius)
         .width(width)
         .fill(palette.itemAt(i))
-        .stroke(null)
+        .stroke('black')
         .zIndex(5);
       gauge
         .bar(i + 100)
@@ -131,6 +131,9 @@ function buildGaugeA() {
           '<br/> <span style="color:#929292; font-size: 5px;"></span>'  + 'from ' +
           (capitalizeFirstLetter(restaurantName))
         )
+        .fontFamily('Verdana')
+        .fontColor('black')
+        .fontWeight(600)
         .useHtml(true);
       gauge
         .title()
@@ -229,7 +232,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
       .radius(radius)
       .width(width)
       .fill(palette.itemAt(i))
-      .stroke(null)
+      .stroke('black')
       .zIndex(5);
     gauge
       .bar(i + 100)
@@ -278,6 +281,9 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
         '<br/> <span style="color:#929292; font-size: 5px;"></span>'  + 'from ' +
         (capitalizeFirstLetter(restaurantName))
       )
+      .fontFamily('Verdana')
+      .fontColor('black')
+      .fontWeight(600)
       .useHtml(true);
     gauge
       .title()
@@ -401,7 +407,9 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
     .displayMode('separated')
     .positionMode('point')
     .useHtml(true)
+    .fontFamily('Verdana')
     .fontSize(12)
+    .font-color('black')
     .offsetX(5)
     .offsetY(0)
     .format(function () {
@@ -425,20 +433,22 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
 
   // Create first series with mapped data
   series = chart.bar(firstSeriesData);
-  series.name(capitalizeFirstLetter(value1)).color('deeppink');
+  series.name(capitalizeFirstLetter(value1)).color('deeppink').stroke('black');
   series.tooltip().position('left').anchor('right-center');
 
   // Create second series with mapped data
   series = chart.bar(secondSeriesData);
-  series.name(capitalizeFirstLetter(value2)).color('#14A1EC');
+  series.name(capitalizeFirstLetter(value2)).color('#64b5f6').stroke('black');
   series.tooltip().position('right').anchor('left-center');
 
   // Turn on legend
   chart
     .legend()
+    .fontColor('black')
+    .fontWeight(600)
+    .fontSize(16)
     .enabled(true)
     .inverted(false)
-    .fontSize(13)
     .padding([0, 0, 20, 0]);
 
   // Set container id for the chart

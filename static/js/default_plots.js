@@ -87,7 +87,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
      };
       
       var makeBarWithBar = function (gauge, radius, i, width) {
-        var stroke = null;
+        var stroke = 'stroke';
           gauge
             .label(i)
             .text(dinamicText(i))
@@ -108,7 +108,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
             .radius(radius)
             .width(width)
             .fill(palette.itemAt(i))
-            .stroke(null)
+            .stroke('black')
             .zIndex(5);
           gauge
             .bar(i + 100)
@@ -127,7 +127,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
           gauge.data(dataSet);
           gauge
             .fill('#fff')
-            .stroke(null)
+            .stroke('null')
             .padding(0)
             .margin(100)
             .startAngle(0)
@@ -153,9 +153,12 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
           gauge
             .title()
             .text(
-              'Percent Daily Value:' + '<br/> <span style="color:#929292; font-size: 5px;"></span>'
+              'Percent Daily Value:' + '<br/> <span style="color:#929292; (font-size: 5px;"></span>'
                +capitalizeFirstLetter(itemName) + ', ' +(capitalizeFirstLetter(restaurantName))
             )
+            .fontFamily('Verdana')
+            .fontColor('black')
+            .fontWeight(600)
             .useHtml(true);
           gauge
             .title()
@@ -230,7 +233,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
    };
       
     var makeBarWithBar = function (gauge, radius, i, width) {
-      var stroke = null;
+      var stroke = 'null';
         gauge
           .label(i)
           .text(dinamicText(i))
@@ -251,7 +254,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
           .radius(radius)
           .width(width)
           .fill(palette.itemAt(i))
-          .stroke(null)
+          .stroke('black')
           .zIndex(5);
         gauge
           .bar(i + 100)
@@ -299,6 +302,9 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
               'Percent Daily Value:' + '<br/> <span style="color:#929292; font-size: 5px;"></span>'
                +capitalizeFirstLetter(itemName) + ', ' +(capitalizeFirstLetter(restaurantName))
             )
+            .fontFamily('Verdana')
+            .fontColor('black')
+            .fontWeight(600)
             .useHtml(true);
           gauge
             .title()
@@ -378,6 +384,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
 
   // Set padding
   chart.padding([10, 20, 5, 20]);
+  // chart.padding([220, 20, 5, 220]);
 
   // Force chart to stack values by Y scale.
   chart.yScale().stackMode('value');
@@ -396,8 +403,8 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
   chart.yAxis(0).title('Nutritional Value in Grams');
 
   // Allow labels to overlap
-  chart.xAxis(0).overlapMode('allow-overlap');
-
+  chart.xAxis(0).overlapMode('allow-overlap')
+  
   // Turn on extra axis for the symmetry
   chart
     .xAxis(1)
@@ -417,7 +424,6 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
     .displayMode('separated')
     .positionMode('point')
     .useHtml(true)
-    .fontSize(12)
     .offsetX(5)
     .offsetY(0)
     .format(function () {
@@ -439,20 +445,22 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
 
   // Create first series with mapped data
   series = chart.bar(firstSeriesData);
-  series.name(capitalizeFirstLetter(defaultInputA)).color('deeppink');
+  series.name(capitalizeFirstLetter(defaultInputA)).color('deeppink').stroke('black');
   series.tooltip().position('left').anchor('right-center');
 
   // Create second series with mapped data
   series = chart.bar(secondSeriesData);
-  series.name(capitalizeFirstLetter(defaultInputB)).color('#14A1EC');
+  series.name(capitalizeFirstLetter(defaultInputB)).color('#64b5f6').stroke('black');
   series.tooltip().position('right').anchor('left-center');
 
   // Turn on legend
   chart
     .legend()
+    .fontColor('black')
+    .fontWeight(600)
+    .fontSize(16)
     .enabled(true)
     .inverted(false)
-    .fontSize(13)
     .padding([0, 0, 20, 0]);
 
   // Set container id for the chart

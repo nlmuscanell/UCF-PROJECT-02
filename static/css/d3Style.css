@@ -1,11 +1,13 @@
 .aText {
-  font-family: sans-serif;
+  font-family: Verdana, sans-serif;
   font-size: 16px;
   text-anchor: middle;
 }
 
 .active {
   font-weight: bold;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
   fill: #000;
   transition: fill 0.3s ease-out;
   text-anchor: middle;
@@ -13,6 +15,8 @@
 
 .inactive {
   font-weight: lighter;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
   fill: #c9c9c9;
   transition: fill 0.3s ease-out;
   text-anchor: middle;
@@ -25,30 +29,34 @@
 
 /* font size dependent on radius, see app.js */
 .stateText {
-  font-family: sans-serif;
+  font-family: Verdana, sans-serif;
   fill: #fff;
   text-anchor: middle;
 }
 
 .itemCircle {
   /* fill: #1236d6; */
-  fill: #14A1EC;
-  stroke: #131111a1;
+  fill: #64b5f6;
+  stroke: black;
+  stroke-width: 2px;
 }
 .mcdonaldsColor {
   /* fill: #1236d6; */
-  fill: #14A1EC;
-  stroke: #131111a1;
+  fill: #64b5f6;
+  stroke: black;
+  stroke-width: 2px;
 }
 .starbucksColor {
   /* fill: #1236d6; */
   fill: deeppink;
-  stroke: #131111a1;
+  stroke: black;
+  stroke-width: 2px;
 }
 .subwayColor {
   /* fill: #1236d6; */
   fill: #AE84FC;
-  stroke: #131111a1;
+  stroke: black;
+  stroke-width: 2px;
 }
 
 .chart {

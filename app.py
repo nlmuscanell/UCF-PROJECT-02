@@ -39,10 +39,17 @@ app = Flask(__name__)
 
 @app.route("/")
 
+@app.route("/home")
 def index():
     """Return the homepage."""
-    ##return("hello")
     return render_template("index.html")
+
+# Define the route to the dashboard
+@app.route("/dashboard")
+
+def dashboard():
+    return render_template("dashboard.html")
+
 
 # Define the route to "/nutrition"
 @app.route("/api/v1.0/nutrition")
