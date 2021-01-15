@@ -21,7 +21,7 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pre-registration'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
 db = SQLAlchemy(app)
 
 engine = create_engine(f'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info')
