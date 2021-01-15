@@ -1,5 +1,6 @@
 # Dependencies
-
+import os
+from models import create_classes
 import numpy as np
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
@@ -9,7 +10,7 @@ from config import username, password
 import decimal
 import flask.json
 from flask import Flask, jsonify
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, request, redirect
 
 #################################################
 # Flask Setup
@@ -21,13 +22,13 @@ heroku = Heroku(app)
 #################################################
 # Database Setup
 #################################################
-#app.config['SQLALCHEMY_DATABASE_URI'] = sqlite:///database/fastfood_nutritional_info.sqlite"#
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
+app.config['SQLALCHEMY_DATABASE_URI'] = sqlite:///database/fastfood_nutritional_info.sqlite"
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-# engine = create_engine(f"sqlite:///database/fastfood_nutritional_info.sqlite")
-engine = create_engine('postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info')
+engine = create_engine(f"sqlite:///database/fastfood_nutritional_info.sqlite")
+# engine = create_engine('postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info')
 connection = engine.connect()
 
 # reflect an existing database into a new model
