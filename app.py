@@ -5,7 +5,10 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
+from config import username, password
 
+import decimal
+import flask.json
 from flask import Flask, jsonify
 from flask import Flask, render_template, redirect
 
@@ -13,7 +16,8 @@ from flask import Flask, render_template, redirect
 # Database Setup
 #################################################
 
-engine = create_engine("sqlite:///database/fastfood_nutritional_info.sqlite", echo=False)
+engine = create_engine(f'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info')
+connection = engine.connect()
 
 # reflect an existing database into a new model
 Base = automap_base()
@@ -86,7 +90,7 @@ def nutrition():
      
      # Create a nested dictionary to store the nutritional values
      item_dict["nutritional_values"] = {}
-     item_dict["nutritional_values"]["calories"] = value.calories
+     item_dict["nutritional_values"]["calories"] = value.calories_g
      item_dict["nutritional_values"]["calories_from_fat"] = value.calories_from_fat
      item_dict["nutritional_values"]["total_fat_g"] = value.total_fat_g
      item_dict["nutritional_values"]["saturated_fat_g"] = value.saturated_fat_g

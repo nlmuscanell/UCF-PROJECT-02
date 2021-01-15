@@ -54,7 +54,7 @@ function buildGaugeA() {
   ]);
 
   function dinamicText(i) {
-    if (values[i] == "nan") {
+    if (values[i] == null) {
       return valueNames[i] + ', <span style="">NA</span>'
     } else {
       return valueNames[i] + ', <span style="">' + values[i] + '%</span>'
@@ -203,7 +203,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
     ]);
 
     function dinamicText(i) {
-      if (values[i] == "nan") {
+      if (values[i] == null) {
         return valueNames[i] + ', <span style="">NA</span>'
       } else {
         return valueNames[i] + ', <span style="">' + values[i] + '%</span>'
@@ -409,7 +409,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
     .useHtml(true)
     .fontFamily('Verdana')
     .fontSize(12)
-    .font-color('black')
+    .fontColor('black')
     .offsetX(5)
     .offsetY(0)
     .format(function () {
