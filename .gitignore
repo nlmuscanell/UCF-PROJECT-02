@@ -1,1 +1,5 @@
 config.py
+.ipynb_checkpoints
+.vscode
+__pycache__
+.Rapp.history

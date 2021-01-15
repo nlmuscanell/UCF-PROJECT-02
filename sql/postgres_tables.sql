@@ -68,11 +68,11 @@ CREATE TABLE nutrition (
 --Add Foreign Keys
 ------------------------------------------------------------------------ 
 
-ALTER TABLE nutrition
-ADD FOREIGN KEY (item_id) REFERENCES menu_items(id);
+-- ALTER TABLE nutrition
+-- ADD FOREIGN KEY (item_id) REFERENCES menu_items(id);
 
-ALTER TABLE nutrition
-ADD FOREIGN KEY(category_id) REFERENCES categories(id);
+-- ALTER TABLE nutrition
+-- ADD FOREIGN KEY(category_id) REFERENCES categories(id);
 
-ALTER TABLE nutrition
-ADD FOREIGN KEY(restaurant_id) REFERENCES restaurants(id);
+-- ALTER TABLE nutrition
+-- ADD FOREIGN KEY(restaurant_id) REFERENCES restaurants(id);
