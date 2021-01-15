@@ -5,8 +5,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-from config import username, password
-
+# from config import username, password
 import decimal
 import flask.json
 from flask import Flask, jsonify
@@ -21,10 +20,12 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
+app.config['SQLALCHEMY_DATABASE_URI'] = sqlite:///database/fastfood_nutritional_info.sqlite"
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-engine = create_engine(f'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info')
+engine = create_engine(f"sqlite:///database/fastfood_nutritional_info.sqlite")
 connection = engine.connect()
 
 # reflect an existing database into a new model
