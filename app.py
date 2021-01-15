@@ -16,12 +16,13 @@ from flask import Flask, render_template, redirect
 #################################################
 
 app = Flask(__name__)
+heroku = Heroku(app)
 
 #################################################
 # Database Setup
 #################################################
 #app.config['SQLALCHEMY_DATABASE_URI'] = sqlite:///database/fastfood_nutritional_info.sqlite"#
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://sdesjxtwaanoei:27139838c28f42fb2e7b84874978a570f3687a03832c7b7eae5aa5a10db7c71c@ec2-3-215-76-208.compute-1.amazonaws.com:5432/d8k17oe59dne90'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
