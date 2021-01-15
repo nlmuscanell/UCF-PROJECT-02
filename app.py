@@ -5,7 +5,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-# from config import username, password
+from config import username, password
 import decimal
 import flask.json
 from flask import Flask, jsonify
@@ -16,12 +16,12 @@ from flask import Flask, render_template, redirect
 #################################################
 
 app = Flask(__name__)
-
+app.config.from_object('config')
 #################################################
 # Database Setup
 #################################################
-app.config['SQLALCHEMY_DATABASE_URI'] = sqlite:///database/fastfood_nutritional_info.sqlite"
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
+#app.config['SQLALCHEMY_DATABASE_URI'] = sqlite:///database/fastfood_nutritional_info.sqlite"#
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
