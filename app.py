@@ -22,12 +22,12 @@ heroku = Heroku(app)
 #################################################
 # Database Setup
 #################################################
-app.config['SQLALCHEMY_DATABASE_URI'] = sqlite:///database/fastfood_nutritional_info.sqlite"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database/fastfood_nutritional_info.sqlite"
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-engine = create_engine(f"sqlite:///database/fastfood_nutritional_info.sqlite")
+engine = create_engine("sqlite:///database/fastfood_nutritional_info.sqlite")
 # engine = create_engine('postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info')
 connection = engine.connect()
 
