@@ -27,7 +27,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 # engine = create_engine(f"sqlite:///database/fastfood_nutritional_info.sqlite")
-engine = create_engine('postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info')
+engine = create_engine('postgresql+psycopg2://postgres:postgres@localhost/fastfood_nutritional_info')
 connection = engine.connect()
 
 # reflect an existing database into a new model
