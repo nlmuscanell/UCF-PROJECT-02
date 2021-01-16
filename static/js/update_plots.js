@@ -127,9 +127,8 @@ function buildGaugeA() {
       gauge
         .title()
         .text(
-          'Micronutrient values on' + ' ' +capitalizeFirstLetter(itemName) +
-          '<br/> <span style="color:#929292; font-size: 5px;"></span>'  + 'from ' +
-          (capitalizeFirstLetter(restaurantName))
+          'Percent Daily Value:' + '<br/> <span style="color:#929292; font-size: 5px;"></span>'
+          +capitalizeFirstLetter(itemName) + ', ' +(capitalizeFirstLetter(restaurantName))
         )
         .fontFamily('Verdana')
         .fontColor('black')
@@ -277,9 +276,8 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
     gauge
       .title()
       .text(
-        'Micronutrient values on' + ' ' +capitalizeFirstLetter(itemName) +
-        '<br/> <span style="color:#929292; font-size: 5px;"></span>'  + 'from ' +
-        (capitalizeFirstLetter(restaurantName))
+        'Percent Daily Value:' + '<br/> <span style="color:#929292; font-size: 5px;"></span>'
+               +capitalizeFirstLetter(itemName) + ', ' +(capitalizeFirstLetter(restaurantName))
       )
       .fontFamily('Verdana')
       .fontColor('black')
