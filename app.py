@@ -10,7 +10,7 @@ import decimal
 import flask.json
 from flask import Flask, jsonify
 from flask import Flask, render_template, request, redirect
-# from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 
 #################################################
 # Flask Setup
@@ -21,9 +21,9 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database/fastfood_nutritional_info.sqlite"
 # "sqlite:///database/fastfood_nutritional_info.sqlite"
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -98,7 +98,7 @@ def nutrition():
      
      # Create a nested dictionary to store the nutritional values
      item_dict["nutritional_values"] = {}
-     item_dict["nutritional_values"]["calories"] = value.calories_g
+     item_dict["nutritional_values"]["calories"] = value.calories
      item_dict["nutritional_values"]["calories_from_fat"] = value.calories_from_fat
      item_dict["nutritional_values"]["total_fat_g"] = value.total_fat_g
      item_dict["nutritional_values"]["saturated_fat_g"] = value.saturated_fat_g
