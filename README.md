@@ -1,12 +1,12 @@
 # Interactive Dashboard - Fast Food Nutrition
 
-Project Team:
-Kathy Manthey
-Manuela Munoz
+**Project Team:**
+Kathy Manthey,
+Manuela Munoz,
 Nicole Muscanell
 
 
-##### **Project Purpose**: Provide nutritional data for three major fast food chains in an interactive visual dashboard.
+**Project Purpose**: Provide nutritional data for three major fast food chains in an interactive visual dashboard.
 
 **Homepage:**
 The home page provides access to the dashboard as well as links to the data and full restaurant menus.
@@ -15,8 +15,7 @@ The home page provides access to the dashboard as well as links to the data and 
 ![alt text](https://github.com/nlmuscanell/UCF-PROJECT-2/blob/master/app_images/homepage.png?raw=true)
 
 
-**Dashboard:**
-Our dashboard is easily accessed via a web link: https://fastfood-nutrition-dashboard.herokuapp.com/home
+**Dashboard Weblink:** https://fastfood-nutrition-dashboard.herokuapp.com/home
 
 **Features:**
 - Drop down menus
