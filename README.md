@@ -11,7 +11,7 @@ Nicole Muscanell
 **Homepage:**
 The home page provides access to the dashboard as well as links to the data and full restaurant menus.
 
-![alt text](https://github.com/nlmuscanell/UCF-PROJECT-2/blob/master/homepage.png?raw=true)
+![alt text](https://github.com/nlmuscanell/UCF-PROJECT-2/blob/master/app_images/homepage.png?raw=true)
 
 **Dashboard:**
 Our dashboard is easily accessed via a web link: https://fastfood-nutrition-dashboard.herokuapp.com/home
