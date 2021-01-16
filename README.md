@@ -23,15 +23,16 @@ Two cascading drop down menus filter data by restuarant, then food category, and
 - Bar and gauge charts
 The selected dropdown menu choices dynamically populate both the stacked bar and gauge charts.  The stacked bar provides a comparison of macronutrients whereas the radial charts provide the user with a comparison of the micronutrients.  Hover capability has been added to display the menu item values in the bar chart. 
 
-![alt text](https://github.com/nlmuscanell/UCF-PROJECT-2/blob/master/dashbaord_bar.png?raw=true)
+![alt text](https://github.com/nlmuscanell/UCF-PROJECT-2/blob/master/app_images/dashboard_bar.png?raw=true)
 
-![alt text](https://github.com/nlmuscanell/UCF-PROJECT-2/blob/master/dashbaord_gauge.png?raw=true)
+![alt text](https://github.com/nlmuscanell/UCF-PROJECT-2/blob/master/app_images/dashboard_gauge.png?raw=true)
+
 
 
 - Scatter plot
 The scatter plot allows users to see nutritional data for all menu items by restaurant. A toggle feature was added to each axis, allowing users to select a restaurant (x-axis) and then choose to view calories, carbohydrates, or protein (y-axis). Each menu item is represented by a circle on the scatter plot's x axis.  Hover capability displays the menu item and the value for the selected macronutrient.
 
-![alt text](https://github.com/nlmuscanell/UCF-PROJECT-2/blob/master/dashbaord_scatter.png?raw=true)
+![alt text](https://github.com/nlmuscanell/UCF-PROJECT-2/blob/master/app_images/dashboard_scatter.png?raw=true)
 
 
 **Data Source:** 
