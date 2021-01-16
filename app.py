@@ -21,7 +21,8 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database/fastfood_nutritional_info.sqlite"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
+# "sqlite:///database/fastfood_nutritional_info.sqlite"
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{username}:{password}@localhost/fastfood_nutritional_info'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
