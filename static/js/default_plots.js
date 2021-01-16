@@ -1,8 +1,5 @@
 // Javascript Project 2: Fast-food Nutrition Plots//
 
-// Note: McDonald's has no veggie sandwiches, bread/toppings, or other foods
-// Note: Subway has no snacks/sides, beverages, or other foods
-// Note: Starbucks has no snacks/sides
 
 // ///// CAPITALIZE FIRST LETTER FUNCTION /////
 

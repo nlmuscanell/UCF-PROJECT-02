@@ -1,37 +1,5 @@
 // Javascript Project 2: Fast-food Nutrition Plots//
 
-// Note: McDonald's has no veggie sandwiches, bread/toppings, or other foods
-// Note: Subway has no snacks/sides, beverages, or other foods
-// Note: Starbucks has no snacks/sides
-
-// ///// CAPITALIZE FIRST LETTER FUNCTION /////
-
-function capitalizeFirstLetter(str) {
-  if (str == 'mcdonalds') {
-    return "McDonald's"
-  } else {
-     var splitStr = str.split(' ');
-     for (var i = 0; i < splitStr.length; i++) {
-     splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-     }
-    return splitStr.join(' ')
-   }
-  };
-
-///// LOWERCASE FIRST LETTER FUNCTION /////
-
-function lowerCaseFirstLetter(str) {
-  if (str == "McDonald's") {
-    return "mcdonalds"
-  } else {
-     var splitStr = str.split(' ');
-     for (var i = 0; i < splitStr.length; i++) {
-     splitStr[i] = splitStr[i].charAt(0).toLowerCase() + splitStr[i].substring(1);
-     }
-    return splitStr.join(' ')
-   }
-  };
-  
 ///////////////// FUNCTION LEFT GAUGE CHART (A) /////////////////////
 
 function buildGaugeA() {
