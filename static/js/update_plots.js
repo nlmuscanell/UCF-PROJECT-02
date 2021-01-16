@@ -403,7 +403,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
     .useHtml(true)
     .fontFamily('Verdana')
     .fontSize(12)
-    .font-color('black')
+    .fontColor('black')
     .offsetX(5)
     .offsetY(0)
     .format(function () {
