@@ -77,6 +77,14 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
         '#AE84FC',
         '#4CE744',
       ]);
+  
+      function dinamicText(i) {
+        if (values[i] == null) {
+          return valueNames[i] + ', <span style="">NA</span>'
+        } else {
+          return valueNames[i] + ', <span style="">' + values[i] + '%</span>'
+        }
+     };
       
      function dinamicText(i) {
       if (values[i] == null) {
@@ -227,8 +235,6 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
   
     function dinamicText(i) {
       if (values[i] == null) {
-        return valueNames[i] + ', <span style="">NA</span>'
-      } else if(values[i] == "nan") {
         return valueNames[i] + ', <span style="">NA</span>'
       } else {
         return valueNames[i] + ', <span style="">' + values[i] + '%</span>'
