@@ -79,22 +79,13 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
       ]);
   
       function dinamicText(i) {
-        if (values[i] == null) {
+        if (values[i] == "nan") {
           return valueNames[i] + ', <span style="">NA</span>'
         } else {
           return valueNames[i] + ', <span style="">' + values[i] + '%</span>'
         }
      };
       
-     function dinamicText(i) {
-      if (values[i] == null) {
-        return valueNames[i] + ', <span style="">NA</span>'
-      } else if(values[i] == "nan") {
-        return valueNames[i] + ', <span style="">NA</span>'
-      } else {
-        return valueNames[i] + ', <span style="">' + values[i] + '%</span>'
-      }
-   };
       var makeBarWithBar = function (gauge, radius, i, width) {
         var stroke = 'stroke';
           gauge
@@ -234,7 +225,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
     ]);
   
     function dinamicText(i) {
-      if (values[i] == null) {
+      if (values[i] == "nan") {
         return valueNames[i] + ', <span style="">NA</span>'
       } else {
         return valueNames[i] + ', <span style="">' + values[i] + '%</span>'

@@ -60,7 +60,6 @@ function buildGaugeA() {
       return valueNames[i] + ', <span style="">' + values[i] + '%</span>'
     }
  };
-
     var makeBarWithBar = function (gauge, radius, i, width) {
       var stroke = null;
       gauge
@@ -397,7 +396,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
     .overlapMode('allow-overlap');
 
   // Set chart title text
-  // chart.title('Macronutrients: Comparison Chart');
+  chart.title('Macronutrients: Comparison Chart');
 
   chart.interactivity().hoverMode('by-x');
 
@@ -410,7 +409,7 @@ d3.json("/api/v1.0/nutrition").then(function(data) {
     .useHtml(true)
     .fontFamily('Verdana')
     .fontSize(12)
-    .fontColor('black')
+    .font-color('black')
     .offsetX(5)
     .offsetY(0)
     .format(function () {
