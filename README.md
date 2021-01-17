@@ -48,6 +48,9 @@ The scatter plot allows users to see nutritional data for all menu items by rest
 
 
 **Technical Specifications:**
+Data cleaning:
+   - Python
+   - Pandas
 
 - Backend:
     - Python Flask
@@ -57,8 +60,6 @@ The scatter plot allows users to see nutritional data for all menu items by rest
    - HTML
    - CSS
    - JavaScript
-   - Python
-   - Pandas
 
 - JS libraries:
    - AnyChart
